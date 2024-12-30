@@ -1,5 +1,5 @@
 import mongoose from "mongoose"
-
+import colors from 'colors'
 
 export const connectDB = async () =>{
     try{
@@ -11,9 +11,9 @@ export const connectDB = async () =>{
         console.log(connection)
 
         const url = `${connection.host}:${connection.port}`
-        console.log(`base de datos conectada en: ${url}`)
+        console.log(colors.magenta.italic(`base de datos conectada en:${url}`))
     }catch(error){
-        console.log(error.message)
+        console.log(colors.bgRed.white.italic(error.message))
         process.exit(1)
     }
 }
