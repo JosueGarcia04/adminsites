@@ -1,5 +1,6 @@
 import mongoose from "mongoose"
 import colors from 'colors'
+import User, {IUser} from '../models/User'
 
 export const connectDB = async () =>{
     try{
