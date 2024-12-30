@@ -1,4 +1,5 @@
 import express from 'express' //ecmascript modules
+import 'dotenv/config'
 import router from './router'
 import { connectDB } from './config/db'
 
