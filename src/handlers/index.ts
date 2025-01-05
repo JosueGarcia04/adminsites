@@ -10,7 +10,7 @@ export const createAccount = async (req: Request, res: Response) => {
       //verificar existencia de usuarios
     const UserExist = await User.findOne({email})
     if(UserExist){
-        console.log("email no existente")
+        console.log("email no existe")
     }
     const handle = slugify(req.body.handle, '')
 
