@@ -5,7 +5,7 @@ import User, {IUser} from '../models/User'
 export const connectDB = async () =>{
     try{
         if (!process.env.MONGO_URI) {
-            console.error("Error: MONGO_URI no está definido en el archivo .env");
+            console.error("Error: MONGO_URI no está definido en: .env");
             process.exit(1);
         }
         const {connection} = await mongoose.connect(process.env.MONGO_URI)
